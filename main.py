@@ -9,11 +9,14 @@ from sklearn.manifold import SpectralEmbedding
 import pandas as pd
 
 # Load the text file into a DataFrame
-df = pd.read_csv('processed.cleveland.data', delimiter=',', header=None)
+df1 = pd.read_csv('processed.cleveland.data', delimiter=',', header=None)
+df2 = pd.read_excel('CTG.xls', sheet_name = 'Raw Data')
+
 
 # Display the DataFrame
-print(df)
+print(df1)
+print(df2)
 
 embedding = SpectralEmbedding(n_components=2)
-df1 = embedding.fit_transform(df)
+df1 = embedding.fit_transform(df1)
 print(df1.shape)
