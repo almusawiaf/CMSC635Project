@@ -207,8 +207,8 @@ results2 = [get_classification_metrics(y2_test, p) for p in pred_Y2]
 
 
 # # performing experiment 2    
-# df1 = stats.zscore(X1)
-# df2 = stats.zscore(X2)
+df1 = stats.zscore(X1)
+df2 = stats.zscore(X2)
 
 
 
